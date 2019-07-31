@@ -1,4 +1,7 @@
 <?php
+use Illuminate\Support\Facades\View;
+use Faker\Provider\en_IN\Person;
+use App\Http\Controllers\PersonController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,3 +17,5 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/person','PersonController@index');
